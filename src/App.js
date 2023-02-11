@@ -3,6 +3,7 @@ import MainPage from "./components/pages/MainPage";
 import Galery from "./components/pages/Galery";
 import AboutMe from "./components/pages/AboutMe";
 import RootLayout from "./components/pages/Root";
+import ErrorPage from "./components/pages/ErrorPage";
 import "./App.css";
 
 import "./assets/fonts/MavelPoster-Black.ttf";
@@ -13,6 +14,7 @@ const routes = createBrowserRouter([
   {
     path: "/",
     element: <RootLayout />,
+    errorElement: <ErrorPage />,
     children: [
       { path: "/", element: <MainPage /> },
       { path: "/galery", element: <Galery /> },

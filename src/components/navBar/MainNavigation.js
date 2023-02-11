@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import styles from "./MainNavigation.module.css";
 
 import logo from "../../assets/images/logoTr.png";
@@ -9,19 +9,44 @@ function MainNavigation() {
     <>
       <header>
         <div>
-          <Link to="/">
+          <NavLink
+            to="/"
+            className={({ isActive }) => (isActive ? styles.active : undefined)}
+            end
+          >
             <img src={logo} alt="logoImg" class={styles.logoImg}></img>
-          </Link>
+          </NavLink>
         </div>
         <ul>
           <li>
-            <Link to="/">Home</Link>
+            <NavLink
+              to="/"
+              className={({ isActive }) =>
+                isActive ? styles.active : undefined
+              }
+            >
+              Home
+            </NavLink>
           </li>
           <li>
-            <Link to="/galery">Gallery</Link>
+            <NavLink
+              to="/galery"
+              className={({ isActive }) =>
+                isActive ? styles.active : undefined
+              }
+            >
+              Gallery
+            </NavLink>
           </li>
           <li>
-            <Link to="/aboutme">About Me</Link>
+            <NavLink
+              to="/aboutme"
+              className={({ isActive }) =>
+                isActive ? styles.active : undefined
+              }
+            >
+              About Me
+            </NavLink>
           </li>
         </ul>
       </header>
