@@ -1,0 +1,69 @@
+body {
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.8),
+    rgba(0, 0, 0, 0.8)
+  );
+  color: white;
+}
+
+@font-face {
+  font-family: "Justinka";
+  src: local("Justink"),
+    url("../../assets/fonts/Justink.ttf") format("truetype");
+
+  font-family: "MavelPoster-Black";
+  src: local("MavelPoster-Black"),
+    url("../../assets/fonts/MavelPoster-Black.ttf") format("truetype");
+
+  font-family: "LezernoDemo";
+  src: local("LezernoDemo"),
+    url("../../assets/fonts/LezernoDemo.ttf") format("truetype");
+}
+
+.title {
+  font-family: "Justink", "MavelPoster-Black", "LezernoDemo";
+  font-weight: bold;
+  font-size: 64px;
+}
+
+.container {
+  background-position: cover;
+  background-repeat: no-repeat;
+
+  margin: 0 auto;
+  padding: 15px;
+  text-align: center;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: white;
+}
+.container button {
+  font-size: 12px;
+  font-weight: bold;
+  width: 100px;
+  height: 50px;
+  padding: 10px;
+  background: red;
+  color: white;
+  cursor: pointer;
+  border-radius: 15px;
+  display: center;
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
+  margin-top: 25px;
+}
+
+.container button:hover {
+  color: black;
+  background: rgb(248, 112, 112);
+  text-decoration: underline;
+}
+
+.container p {
+  width: 70%;
+  margin: 0 auto;
+  font-size: 20px;
+}
